@@ -7,6 +7,10 @@ Well worry no more. This plugin is designed to provide a menu in your Chromium b
 
 Built with React and FAST-DNA. Work in progress.
 
+![](./docs/img/preview.png)
+
+<small><i>Yes, I downloaded plugins for my Minecraft server.</i></small>
+
 ---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
