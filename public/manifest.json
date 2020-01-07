@@ -5,7 +5,7 @@
   "author": "Gino Messmer",
   "version": "0.0.1",
   "description": "TMDM - The Missing Download Menu",
-  "permissions": ["downloads"],
+  "permissions": ["downloads", "downloads.open"],
   "browser_action": {
     "default_popup": "index.html"
   }

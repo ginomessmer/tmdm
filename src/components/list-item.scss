@@ -1,0 +1,21 @@
+.download-item {
+  margin: 8px 0px;
+  padding: 8px;
+
+  display: flex;
+  align-items: center;
+
+  .meta {
+    margin-left: 8px;
+
+    * {
+      display: block;
+      width: fit-content;
+    }
+
+    .small {
+      font-size: 0.88em;
+      opacity: 0.88;
+    }
+  }
+}
