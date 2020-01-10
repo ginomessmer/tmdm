@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { ListItem } from './components'
-import { Progress, TextAction } from "@microsoft/fast-components-react-msft";
+import { Progress, TextAction, Caption } from "@microsoft/fast-components-react-msft";
 
 import useDarkMode from 'use-dark-mode';
 import { DesignSystemProvider } from '@microsoft/fast-jss-manager-react';
@@ -28,16 +28,22 @@ const App = () => {
 
   return (
     <DesignSystemProvider designSystem={designSystem}>
-      <TextAction className="m-b-sm"
-        appearance="outline"
-        placeholder="Search..."
-        onChange={event => setSearchTerm(event.target.value)} />
+      <div className="search-container">
+        <TextAction className="m-b-sm"
+          appearance="outline"
+          placeholder="Search downloads"
+          onChange={event => setSearchTerm(event.target.value)} />
+      </div>
 
-      {isLoading && <Progress />}
+      <div className="results-container">
+        {isLoading && <Progress />}
 
-      {downloads && downloads.length > 0 && !isLoading && <div>
-        {downloads.map(d => <ListItem key={d.id} download={d} />)}
-      </div>}
+        {downloads.length == 0 && !isLoading && <Caption>No results</Caption> }
+
+        {downloads && downloads.length > 0 && !isLoading && <article>
+          {downloads.map(d => <ListItem key={d.id} download={d} />)}
+        </article>}
+      </div>
     </DesignSystemProvider>
   );
 }

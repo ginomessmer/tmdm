@@ -17,8 +17,13 @@ const ListItem = (props) => {
       iconUrl => setFileIconUrl(iconUrl));
   }, []);
 
+  const openDownload = (id) => chrome.downloads.open(id);
+
   return (<>
-    <Card className="download-item" id={props.download.id} onClick={() => chrome.downloads.open(props.download.id)}>
+    <Card id={props.download.id}
+      className="download-item"
+      onClick={() => openDownload(props.download.id)}
+      title={props.download.url}>
       <Image className="icon" src={fileIconUrl} />
 
       <div className="meta">
