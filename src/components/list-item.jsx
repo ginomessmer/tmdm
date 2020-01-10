@@ -19,7 +19,7 @@ const ListItem = (props) => {
 
   return (<>
     <Card className="download-item" id={props.download.id} onClick={() => chrome.downloads.open(props.download.id)}>
-      <Image src={fileIconUrl} />
+      <Image className="icon" src={fileIconUrl} />
 
       <div className="meta">
         <Label>

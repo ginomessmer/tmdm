@@ -2,11 +2,12 @@
 
 import React, { useState, useEffect } from 'react';
 import { ListItem } from './components'
-import { Progress } from "@microsoft/fast-components-react-msft";
+import { Progress, TextAction } from "@microsoft/fast-components-react-msft";
 
-import './App.css';
 import useDarkMode from 'use-dark-mode';
 import { DesignSystemProvider } from '@microsoft/fast-jss-manager-react';
+
+import './App.css';
 
 const App = () => {
   const darkMode = useDarkMode();
@@ -15,19 +16,23 @@ const App = () => {
   };
 
   const [downloads, setDownloads] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    chrome.downloads.search({state: 'complete'}, d => {
+    chrome.downloads.search({state: 'complete', query: searchTerm.split(' ')}, d => {
       setDownloads(d);
       setLoading(false);
     });
-  }, []);
-
-  console.log(JSON.stringify(downloads));
+  }, [searchTerm]);
 
   return (
     <DesignSystemProvider designSystem={designSystem}>
+      <TextAction className="m-b-sm"
+        appearance="outline"
+        placeholder="Search..."
+        onChange={event => setSearchTerm(event.target.value)} />
+
       {isLoading && <Progress />}
 
       {downloads && downloads.length > 0 && !isLoading && <div>
