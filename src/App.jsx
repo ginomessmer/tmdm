@@ -36,7 +36,7 @@ const App = () => {
       </div>
 
       <div className="results-container">
-        {isLoading && <Progress />}
+        {/* {isLoading && <Progress />} */}
 
         {downloads.length == 0 && !isLoading && <Caption>No results</Caption> }
 
