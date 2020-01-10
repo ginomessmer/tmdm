@@ -1,10 +1,12 @@
 
 {
   "manifest_version": 2,
-  "name": "TMDM",
+  "name": "TMDM - The Missing Download Menu",
+  "short_name": "TMDM",
   "author": "Gino Messmer",
   "version": "1.0.0",
   "description": "TMDM - The Missing Download Menu",
+  "homepage_url": "https://ginomessmer.github.io/tmdm",
   "permissions": ["downloads", "downloads.open"],
   "browser_action": {
     "default_popup": "index.html"
