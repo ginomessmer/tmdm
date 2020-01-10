@@ -1,4 +1,17 @@
+:root {
+  --dark-background: #333;
+  --light-background: #fff;
+}
+
 body {
   width: 400px;
   height: 500px;
+}
+
+.dark-mode {
+  background-color: var(--dark-background);
+}
+
+.light-mode {
+  background-color: var(--light-background);
 }
