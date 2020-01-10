@@ -3,7 +3,7 @@
   "manifest_version": 2,
   "name": "TMDM",
   "author": "Gino Messmer",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "TMDM - The Missing Download Menu",
   "permissions": ["downloads", "downloads.open"],
   "browser_action": {
