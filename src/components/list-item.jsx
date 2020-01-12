@@ -18,22 +18,26 @@ const ListItem = (props) => {
   }, []);
 
   const openDownload = (id) => chrome.downloads.open(id);
+  const openFolder = (id) => chrome.downloads.show(id);
 
   return (<>
     <Card id={props.download.id}
       className="download-item"
-      onClick={() => openDownload(props.download.id)}
       title={props.download.url}>
+
       <Image className="icon" src={fileIconUrl} />
 
       <div className="meta">
-        <Label>
-          {props.download.filename.split('\\').pop()}
-        </Label>
-        <Label className="small">
-          {props.download.filename}
-        </Label>
-        <Hypertext className="small" onClick={() => chrome.downloads.show(props.download.id)} href="#">
+        <div onClick={() => openDownload(props.download.id)}>
+          <Label>
+            {props.download.filename.split('\\').pop()}
+          </Label>
+          <Label className="small">
+            {props.download.filename}
+          </Label>
+        </div>
+
+        <Hypertext className="small" onClick={() => openFolder(props.download.id)} href={`#${props.download.id}`}>
           Open folder...
         </Hypertext>
       </div>

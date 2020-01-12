@@ -2,7 +2,11 @@
     --background: #fff;
     --background-alt: #ebebeb;
     --foreground: #000;
+
     --accent: #007acc;
+    --accent-alt: #0066aa;
+
+    --breakpoint-sm: 840px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -99,10 +103,23 @@ h3 {
 a.button {
     color: white;
     background-color: var(--accent);
-    padding: 1rem 2rem;
+    padding: 1em 1.66rem;
     text-decoration: none;
     border-radius: 2px;
     border: 2px solid var(--accent);
+
+    display: inline-block;
+    margin-top: 4px;
+
+    text-transform: uppercase;
+    font-weight: 600;
+
+    transition: background-color, border-color ease-in-out 0.2s;
+}
+
+.button:hover {
+    background-color: var(--accent-alt);
+    border-color: var(--accent-alt);
 }
 
 .button.ghost {
@@ -110,4 +127,25 @@ a.button {
     background-color: rgba(0, 0, 0, 0.1);
     border: 2px solid var(--accent);
     box-sizing: border-box;
+}
+
+.ghost:hover {
+    border-color: var(--accent-alt);
+    opacity: 0.88;
+}
+
+
+/* Mobile */
+@media (max-width: 840px) {
+    section.hero {
+        padding: 2rem;
+    }
+
+    a.button {
+        display: block;
+    }
+
+    .hero:last-of-type {
+        padding-bottom: 3rem;
+    }
 }
