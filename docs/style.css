@@ -116,6 +116,10 @@ a.button {
     transition: background-color, border-color ease-in-out 0.2s;
 }
 
+p.article {
+    max-width: 780px;
+}
+
 .button:hover {
     background-color: var(--accent-alt);
     border-color: var(--accent-alt);
