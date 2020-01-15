@@ -20,7 +20,7 @@ const App = () => {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    chrome.downloads.search({state: 'complete', query: searchTerm.split(' ')}, d => {
+    chrome.downloads.search({state: 'complete', orderBy: ['-startTime'], query: searchTerm.split(' ')}, d => {
       setDownloads(d);
       setLoading(false);
     });
