@@ -13,3 +13,13 @@ Built with [React](https://create-react-app.dev/) and [FAST-DNA](https://fast.de
 - Integrates well to Edge's design system
 - Search
 - Also works on Chrome
+
+## Development setup
+I recommend to either **use WSL or a Linux environment for development** since the npm scripts are tailered for these environment. You'll need to have yarn installed.
+
+### Debug extension
+- First time? Do `yarn` to install all dependencies
+- Build the extension with `yarn build`
+- Go to Edge -> Extensions -> Turn on Developer Mode
+- Hit `Load unpacked` and select to the root of the `./build` folder
+- Happy debugging
