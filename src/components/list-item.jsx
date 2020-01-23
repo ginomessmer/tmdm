@@ -37,7 +37,7 @@ const ListItem = (props) => {
           </Label>
         </div>
 
-        <Hypertext className="small" onClick={() => openFolder(props.download.id)} href={`#${props.download.id}`}>
+        <Hypertext className="small" onClick={() => openFolder(props.download.id)} href="">
           Open folder...
         </Hypertext>
       </div>
