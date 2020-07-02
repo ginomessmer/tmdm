@@ -9,14 +9,14 @@
     </a>
 </div>
 
-<ng-container *ngIf="downloadItems; else noContent">
+<ng-container *ngIf="downloadItems?.length > 0; else noContent">
   <ng-container *ngFor="let item of downloadItems">
     <app-download-item [item]="item"></app-download-item>
   </ng-container>
 </ng-container>
 
-<ng-container #noContent>
+<ng-template #noContent>
   <div class="empty-list">
     No downloads found
   </div>
-</ng-container>
+</ng-template>
