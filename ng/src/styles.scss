@@ -1,1 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  --dark-background: #333;
+  --light-background: #fff;
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+
+  font-family: 'Segoe UI';
+}
+
+::-webkit-scrollbar {
+  width: var(--space-sm);
+}
+
+::-webkit-scrollbar-track {
+  width: var(--space-sm);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: var(--space-sm);
+}
+
+body {
+  width: 400px;
+  height: 500px;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--dark-background);
+    color: var(--light-background);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: var(--light-background);
+    color: var(--dark-background);
+  }
+}
+
+.m-b-sm {
+  margin-bottom: var(--space-sm) !important;
+}
+
+.m-b-md {
+  margin-bottom: var(--space-md) !important;
+}
+
+
+// Inputs
+input[type=text] {
+  background: black;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+
+  width: -webkit-fill-available;
+
+  :focus {
+    border: none;
+  }
+}
