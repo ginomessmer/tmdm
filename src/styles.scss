@@ -137,4 +137,8 @@ a.btn {
   cursor: pointer;
 
   text-decoration: none;
+
+  &.btn-stealth {
+    border: none;
+  }
 }

@@ -4,13 +4,19 @@
     (ngModelChange)="search($event)"
     placeholder="Search downloads">
 
-    <a class="btn" routerLink="/settings">
+    <a class="btn btn-stealth" routerLink="/settings">
       <i class="ms-Icon ms-Icon--More" aria-hidden="true"></i>
     </a>
 </div>
 
-<ng-container *ngIf="downloadItems">
+<ng-container *ngIf="downloadItems; else noContent">
   <ng-container *ngFor="let item of downloadItems">
     <app-download-item [item]="item"></app-download-item>
   </ng-container>
+</ng-container>
+
+<ng-container #noContent>
+  <div class="empty-list">
+    No downloads found
+  </div>
 </ng-container>
