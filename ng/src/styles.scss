@@ -1,11 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
 :root {
-  --dark-1: #333;
-  --dark-2: #2b2b2b;
+  --dark-base: #333;
+  --dark-bg: #2b2b2b;
+  --dark-fg: #3B3B3B;
 
-  --light-1: #fff;
-  --light-2: rgb(238, 238, 238);
+  --light-base: #fff;
+  --light-bg: rgb(238, 238, 238);
+  --light-fg: rgb(238, 238, 238);
 
 
   --space-xs: 4px;
@@ -13,21 +15,23 @@
   --space-md: 16px;
 
   @media (prefers-color-scheme: dark) {
-    --background: var(--dark-1);
-    --background-2: var(--dark-2);
+    --background: var(--dark-base);
+    --background-dark: var(--dark-bg);
+    --background-light: var(--dark-fg);
 
     --border-color: #6B6B6B;
 
-    --color: var(--light-1);
+    --color: var(--light-base);
   }
 
   @media (prefers-color-scheme: light) {
-    --background: var(--light-1);
-    --background-2: var(--light-2);
+    --background: var(--light-base);
+    --background-dark: var(--light-bg);
+    --background-light: var(--light-fg);
 
     --border-color: #6B6B6B;
 
-    --color: var(--dark-1);
+    --color: var(--dark-base);
   }
 
   font-family: 'Segoe UI';
@@ -71,7 +75,7 @@ input[type=text] {
 
   padding: var(--space-sm);
 
-  background: var(--background-2);
+  background: var(--background-dark);
   color: var(--color);
 
   width: -webkit-fill-available;

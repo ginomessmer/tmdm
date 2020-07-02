@@ -1,7 +1,7 @@
 <input type="text" placeholder="Search downloads">
 
 <ng-container *ngIf="downloadItems">
-  <div *ngFor="let item of downloadItems">
-    {{item.filename}}
-  </div>
+  <ng-container *ngFor="let item of downloadItems">
+    <app-download-item [item]="item"></app-download-item>
+  </ng-container>
 </ng-container>

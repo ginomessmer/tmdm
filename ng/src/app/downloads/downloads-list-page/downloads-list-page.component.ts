@@ -15,7 +15,7 @@ export class DownloadsListPageComponent implements OnInit {
     chrome.downloads.search({}, items => {
       this.zone.run(() => {
         this.downloadItems = items;
-      })
+      });
     });
   }
 

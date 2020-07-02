@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-download-item',
@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./download-item.component.scss']
 })
 export class DownloadItemComponent implements OnInit {
+
+  @Input() item: chrome.downloads.DownloadItem;
+
+  get fileTitle() {
+    return this.item.filename.split('\\').pop();
+  }
 
   constructor() { }
 
