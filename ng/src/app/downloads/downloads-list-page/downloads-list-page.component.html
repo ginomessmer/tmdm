@@ -1,4 +1,7 @@
-<input type="text" placeholder="Search downloads">
+<input type="text"
+  [(ngModel)]="searchTerm"
+  (ngModelChange)="search($event)"
+  placeholder="Search downloads">
 
 <ng-container *ngIf="downloadItems">
   <ng-container *ngFor="let item of downloadItems">
