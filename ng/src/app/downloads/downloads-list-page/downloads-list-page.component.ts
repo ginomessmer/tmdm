@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 
 @Component({
   templateUrl: './downloads-list-page.component.html',
@@ -6,9 +6,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DownloadsListPageComponent implements OnInit {
 
-  constructor() { }
+  public downloadItems: chrome.downloads.DownloadItem[] = [];
+
+  constructor(private zone: NgZone) {
+  }
 
   ngOnInit(): void {
+    chrome.downloads.search({}, items => {
+      this.zone.run(() => {
+        this.downloadItems = items;
+      })
+    });
   }
 
 }

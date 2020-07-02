@@ -1,12 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
 
 :root {
-  --dark-background: #333;
-  --light-background: #fff;
+  --dark-1: #333;
+  --dark-2: #2b2b2b;
+
+  --light-1: #fff;
+  --light-2: rgb(238, 238, 238);
+
 
   --space-xs: 4px;
   --space-sm: 8px;
   --space-md: 16px;
+
+  @media (prefers-color-scheme: dark) {
+    --background: var(--dark-1);
+    --background-2: var(--dark-2);
+
+    --border-color: #6B6B6B;
+
+    --color: var(--light-1);
+  }
+
+  @media (prefers-color-scheme: light) {
+    --background: var(--light-1);
+    --background-2: var(--light-2);
+
+    --border-color: #6B6B6B;
+
+    --color: var(--dark-1);
+  }
 
   font-family: 'Segoe UI';
 }
@@ -28,20 +50,9 @@
 body {
   width: 400px;
   height: 500px;
-}
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--dark-background);
-    color: var(--light-background);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  body {
-    background-color: var(--light-background);
-    color: var(--dark-background);
-  }
+  background-color: var(--background);
+  color: var(--color);
 }
 
 .m-b-sm {
@@ -55,14 +66,24 @@ body {
 
 // Inputs
 input[type=text] {
-  background: black;
-  padding: 8px;
-  border: none;
+  border: 1px var(--border-color) solid;
   border-radius: 4px;
+
+  padding: var(--space-sm);
+
+  background: var(--background-2);
+  color: var(--color);
 
   width: -webkit-fill-available;
 
-  :focus {
-    border: none;
+  box-sizing: border-box;
+
+  &:focus {
+    border-width: 2px;
+    transition: all 0.2s ease-in-out;
   }
+}
+
+*:focus {
+  outline: none;
 }
