@@ -1,5 +1,5 @@
 <div class="item"
-  [class.aborted]="!isCompleted"
+  [class.aborted]="item.error"
   (click)="openFile()">
 
   <div class="thumbnail">
@@ -7,16 +7,27 @@
   </div>
 
   <div class="meta">
-    <p class="title">
-      {{fileTitle}}
-    </p>
-    <p class="location">
-      {{item.filename}}
-    </p>
-    <span class="link"
-      *ngIf="isCompleted"
-      (click)="openFolder()">
-      Open folder
-    </span>
+    <div>
+      <p class="title">
+        {{fileTitle}}
+      </p>
+      <p class="location">
+        {{item.filename}}
+      </p>
+      <span class="link"
+        *ngIf="isCompleted"
+        (click)="openFolder()">
+        Open folder
+      </span>
+    </div>
+
+    <!-- Progress bar -->
+    <ng-container *ngIf="item$ | async as i">
+      <ng-container *ngIf="isInProgress">
+        <progress class="progress-bar"
+          [max]="i.totalBytes"
+          [value]="i.bytesReceived"></progress>
+      </ng-container>
+    </ng-container>
   </div>
 </div>

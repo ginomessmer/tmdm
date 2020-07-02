@@ -20,6 +20,11 @@
 
   div.meta {
     margin-left: var(--space-sm);
+    width: -webkit-fill-available;
+
+    .progress-bar {
+      width: 100%;
+    }
 
     p {
       margin: 0;
