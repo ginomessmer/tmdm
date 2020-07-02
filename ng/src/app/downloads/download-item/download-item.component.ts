@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, NgZone } from '@angular/core';
 
 @Component({
   selector: 'app-download-item',
@@ -8,14 +8,18 @@ import { Component, OnInit, Input } from '@angular/core';
 export class DownloadItemComponent implements OnInit {
 
   @Input() item: chrome.downloads.DownloadItem;
+  thumbnailUrl: string;
 
   get fileTitle() {
     return this.item.filename.split('\\').pop();
   }
 
-  constructor() { }
+  constructor(private zone: NgZone) { }
 
   ngOnInit(): void {
+    chrome.downloads.getFileIcon(this.item.id, iconUrl => {
+      this.zone.run(() => this.thumbnailUrl = iconUrl);
+    });
   }
 
 }
