@@ -1,3 +1,7 @@
+[![Angular CI](https://github.com/ginomessmer/tmdm/workflows/Angular%20CI/badge.svg)](https://github.com/ginomessmer/tmdm/actions?query=workflow%3A%22Angular+CI%22)
+[![Edge Store](https://img.shields.io/badge/Edge%20Store-v1-blue)](https://microsoftedge.microsoft.com/addons/detail/gjjchbkfeokfaifbcokbndccpogfjfpn)
+
+
 # The Missing Download Menu
 
 > **Heads up**: This is a major rewrite from v1 and includes some highly requested features from the community. As a design decision, I ditched FAST DNA and replaced React with Angular.
@@ -23,7 +27,7 @@ Like what you're seeing? Feel free to spread the word and if you're feeling extr
 ---
 
 ## Development Setup
-- Install the `@angular/cli` npm package
+- Install the `@angular/cli` npm package as a global tool: `npm install -g @angular/cli`
 - Restore npm packages: `npm i`
 - Build and watch the project while you are developing: `ng build --watch`
 - Enable developer mode in Microsoft Edge and drop the dist folder to the extensions page
