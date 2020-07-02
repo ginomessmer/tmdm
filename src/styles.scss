@@ -107,6 +107,8 @@ input[type=text] {
   color: #63ADE5;
   fill: #63ADE5;
 
+  text-decoration: none;
+
   &:hover {
     box-shadow: 0px 2px 0px 0px #68AFE5;
     color: #7DBAE9;
@@ -133,4 +135,6 @@ a.btn {
   color: var(--color);
 
   cursor: pointer;
+
+  text-decoration: none;
 }

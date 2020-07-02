@@ -21,10 +21,11 @@ export class DownloadsListPageComponent implements OnInit {
     };
 
     chrome.downloads.search(searchQuery, (items) => {
-        this.zone.run(() => {
-          this.downloadItems = items;
-        });
-      }
-    );
+      console.log(items);
+
+      this.zone.run(() => {
+        this.downloadItems = items.filter(x => x.filename);
+      });
+    });
   }
 }

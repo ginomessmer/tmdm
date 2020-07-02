@@ -21,8 +21,9 @@
   }
 
   div.meta {
-    margin-left: var(--space-sm);
-    width: -webkit-fill-available;
+    margin-left: calc(var(--space-sm) * 1.5);
+    width: 85%;
+    // width: -webkit-fill-available;
 
     .progress-bar {
       width: 100%;
@@ -32,6 +33,8 @@
       margin: 0;
       font-weight: 400;
       opacity: 0.9;
+
+      word-wrap: break-word;
 
       &.title {
         text-overflow: ellipsis;

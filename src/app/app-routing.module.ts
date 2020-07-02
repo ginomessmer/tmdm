@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./downloads/downloads.module').then(x => x.DownloadsModule)
+  },
+  {
+    path: 'settings',
+    loadChildren: () => import('./settings/settings.module').then(x => x.SettingsModule)
   }
 ];
 
