@@ -1,19 +1,21 @@
 <div class="item"
-  [class.aborted]="item.error"
-  (click)="openFile()">
+  [class.aborted]="item.error">
 
-  <div class="thumbnail">
+  <div class="thumbnail"
+    (click)="openFile()">
     <img [src]="thumbnailUrl" alt="">
   </div>
 
   <div class="meta">
     <div>
-      <p class="title">
-        {{fileTitle}}
-      </p>
-      <p class="location">
-        {{item.filename}}
-      </p>
+      <div class="file-meta" (click)="openFile()">
+        <p class="title">
+          {{fileTitle}}
+        </p>
+        <p class="location">
+          {{item.filename}}
+        </p>
+      </div>
       <span class="link"
         *ngIf="isCompleted"
         (click)="openFolder()">
