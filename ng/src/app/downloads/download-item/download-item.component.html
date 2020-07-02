@@ -1,4 +1,7 @@
-<div class="item">
+<div class="item"
+  [class.aborted]="!isCompleted"
+  (click)="openFile()">
+
   <div class="thumbnail">
     <img [src]="thumbnailUrl" alt="">
   </div>
@@ -10,5 +13,10 @@
     <p class="location">
       {{item.filename}}
     </p>
+    <span class="link"
+      *ngIf="isCompleted"
+      (click)="openFolder()">
+      Open folder
+    </span>
   </div>
 </div>

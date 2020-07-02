@@ -51,6 +51,10 @@
   border-radius: var(--space-sm);
 }
 
+*:focus {
+  outline: none;
+}
+
 body {
   width: 400px;
   height: 500px;
@@ -88,6 +92,18 @@ input[type=text] {
   }
 }
 
-*:focus {
-  outline: none;
+.link {
+  cursor: pointer;
+  padding: 0;
+  font-size: 12px;
+  line-height: 16px;
+
+  color: #63ADE5;
+  fill: #63ADE5;
+
+  &:hover {
+    box-shadow: 0px 2px 0px 0px #68AFE5;
+    color: #7DBAE9;
+    fill: #7DBAE9;
+  }
 }
