@@ -7,9 +7,11 @@
 
 > ⚠ **Heads up**: This is a major rewrite from v1 and includes some highly requested features from the community. As a design decision, I ditched FAST DNA and replaced React with Angular.
 
-This plugin provides a menu in your Chromium based browser that shows all recent downloads in a non-obstrusive way. Not more or less, it's simple as that.
+This browser extension provides a menu in your Chromium based browser that shows all recent downloads in a non-obstrusive way. Not more or less, it's simple as that.
 
 Built with [Angular](https://angular.io), uses [Fluent Icons](https://developer.microsoft.com/en-us/fluentui#/styles/web/icons).
+
+👉 Get it from the [Edge Extensions Store](https://microsoftedge.microsoft.com/addons/detail/gjjchbkfeokfaifbcokbndccpogfjfpn).
 
 ![Hero Cover](docs/img/hero.png)
 
