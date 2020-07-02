@@ -1,13 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "~office-ui-fabric-core/dist/css/fabric.min.css";
+
 :root {
   --dark-base: #333;
   --dark-bg: #2b2b2b;
   --dark-fg: #3B3B3B;
 
   --light-base: #fff;
-  --light-bg: rgb(238, 238, 238);
-  --light-fg: rgb(238, 238, 238);
+  --light-bg: #fff;
+  --light-fg: #fff;
 
 
   --space-xs: 4px;
@@ -29,7 +31,7 @@
     --background-dark: var(--light-bg);
     --background-light: var(--light-fg);
 
-    --border-color: #6B6B6B;
+    --border-color: #acacac;
 
     --color: var(--dark-base);
   }
@@ -74,10 +76,14 @@ body {
 
 // Inputs
 input[type=text] {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  
   border: 1px var(--border-color) solid;
-  border-radius: 4px;
+  border-radius: 2px;
 
-  padding: var(--space-sm);
+  padding: var(--space-xs) var(--space-sm);
 
   background: var(--background-dark);
   color: var(--color);
@@ -106,4 +112,25 @@ input[type=text] {
     color: #7DBAE9;
     fill: #7DBAE9;
   }
+}
+
+img.icon {
+  fill: var(--color);
+}
+
+button.btn,
+a.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0px var(--space-sm);
+
+  border-radius: var(--space-xs);
+  border: var(--border-color) 1px solid;
+  background: var(--background);
+
+  color: var(--color);
+
+  cursor: pointer;
 }

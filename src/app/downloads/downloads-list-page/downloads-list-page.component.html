@@ -1,7 +1,13 @@
-<input type="text"
-  [(ngModel)]="searchTerm"
-  (ngModelChange)="search($event)"
-  placeholder="Search downloads">
+<div class="toolbar">
+  <input type="text"
+    [(ngModel)]="searchTerm"
+    (ngModelChange)="search($event)"
+    placeholder="Search downloads">
+
+    <a class="btn" routerLink="/settings">
+      <i class="ms-Icon ms-Icon--Settings" aria-hidden="true"></i>
+    </a>
+</div>
 
 <ng-container *ngIf="downloadItems">
   <ng-container *ngFor="let item of downloadItems">
