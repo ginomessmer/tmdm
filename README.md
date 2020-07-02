@@ -11,6 +11,8 @@ This plugin provides a menu in your Chromium based browser that shows all recent
 
 Built with [Angular](https://angular.io), uses [Fluent Icons](https://developer.microsoft.com/en-us/fluentui#/styles/web/icons).
 
+![Hero Cover](docs/img/hero.png)
+
 ## Features
 - [x] Access your downloads from your menu bar
 - [x] Automatic dark and light mode
