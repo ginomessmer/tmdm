@@ -22,7 +22,7 @@
   }
 
   &.aborted {
-    filter: grayscale(1);
+    filter: grayscale(1) brightness(0.8);
     pointer-events: none;
     text-decoration: line-through;
   }
