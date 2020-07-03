@@ -7,7 +7,7 @@
   "version": "2.0",
   "description": "TMDM - The Missing Downloads Menu",
   "homepage_url": "https://ginomessmer.github.io/tmdm",
-  "permissions": ["downloads", "downloads.open", "downloads.shelf"],
+  "permissions": ["downloads", "downloads.open", "downloads.shelf", "content_script "],
   "browser_action": {
     "default_popup": "index.html"
   },

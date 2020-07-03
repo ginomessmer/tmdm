@@ -7,6 +7,10 @@
   }
 }
 
+div.list {
+  margin-bottom: var(--space-sm);
+}
+
 .empty-list {
   margin-top: var(--space-md);
   text-align: center;

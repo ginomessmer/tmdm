@@ -132,13 +132,26 @@ a.btn {
   border: var(--border-color) 1px solid;
   background: var(--background);
 
+  font-size: 14px;
+  font-family: system-ui, sans-serif;
+
   color: var(--color);
 
   cursor: pointer;
+
+  height: 32px;
 
   text-decoration: none;
 
   &.btn-stealth {
     border: none;
+    &:hover {
+      background-color: var(--background-light);  
+    }
+  }
+
+  &.btn-block {
+    display: block;
+    width: 100%;
   }
 }

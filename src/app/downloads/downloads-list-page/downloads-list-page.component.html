@@ -10,9 +10,16 @@
 </div>
 
 <ng-container *ngIf="downloadItems?.length > 0; else noContent">
-  <ng-container *ngFor="let item of downloadItems">
-    <app-download-item [item]="item"></app-download-item>
-  </ng-container>
+  <div class="list">
+    <ng-container *ngFor="let item of downloadItems">
+      <app-download-item [item]="item"></app-download-item>
+    </ng-container>
+  
+    <button (click)="openDownloadsPage()"
+      class="btn btn-stealth btn-block">
+      Show all...
+    </button>  
+  </div>
 </ng-container>
 
 <ng-template #noContent>

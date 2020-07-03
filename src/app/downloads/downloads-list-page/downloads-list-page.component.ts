@@ -17,6 +17,7 @@ export class DownloadsListPageComponent implements OnInit {
   search(term: string) {
     let searchQuery = {
       query: term.split(' '),
+      limit: 30,
       orderBy: ['-startTime']
     };
 
@@ -27,5 +28,9 @@ export class DownloadsListPageComponent implements OnInit {
         this.downloadItems = items.filter(x => x.filename);
       });
     });
+  }
+
+  openDownloadsPage() {
+    chrome.tabs.create({ url: 'chrome://downloads' });
   }
 }
