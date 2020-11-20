@@ -1,6 +1,6 @@
 <div class="item"
   [title]="item.url"
-  [class.aborted]="item.error">
+  [class.aborted]="item.error || !item.exists">
 
   <div class="thumbnail"
     (click)="openFile()">

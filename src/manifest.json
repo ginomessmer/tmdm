@@ -5,7 +5,7 @@
   "short_name": "TMDM",
   "author": "Gino Messmer",
   "version": "2.0",
-  "description": "TMDM - The Missing Downloads Menu",
+  "description": "This extension adds a menu that displays all your downloaded files next to your address bar.",
   "homepage_url": "https://ginomessmer.github.io/tmdm",
   "permissions": ["downloads", "downloads.open", "downloads.shelf", "content_script "],
   "browser_action": {
