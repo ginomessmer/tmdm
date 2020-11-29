@@ -1,11 +1,9 @@
 [![Angular CI](https://github.com/ginomessmer/tmdm/workflows/Angular%20CI/badge.svg)](https://github.com/ginomessmer/tmdm/actions?query=workflow%3A%22Angular+CI%22)
-[![Edge Store](https://img.shields.io/badge/Edge%20Store-v1-blue)](https://microsoftedge.microsoft.com/addons/detail/gjjchbkfeokfaifbcokbndccpogfjfpn)
+[![Edge Store](https://img.shields.io/badge/Edge%20Store-v2-blue)](https://microsoftedge.microsoft.com/addons/detail/gjjchbkfeokfaifbcokbndccpogfjfpn)
 [![Buy me a coffee](https://img.shields.io/badge/buy%20me%20a%20coffee-%E2%98%95-orange)](https://www.buymeacoffee.com/ginomessmer)
 
 
 # The Missing Download Menu
-
-> ⚠ **Heads up**: This is a major rewrite from v1 and includes some highly requested features from the community. As a design decision, I ditched FAST DNA and replaced React with Angular.
 
 This browser extension provides a menu in your Chromium based browser that shows all recent downloads in a non-obstrusive way. Not more or less, it's simple as that.
 
