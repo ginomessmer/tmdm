@@ -1,27 +1,37 @@
-![TMDM - The Missing Download Menu](./docs/img/social_alpha.png)
-Don't you hate it when you download a file and it drops to the lower download bar, but then disappears even though you wanted to click on your download?
+[![Angular CI](https://github.com/ginomessmer/tmdm/workflows/Angular%20CI/badge.svg)](https://github.com/ginomessmer/tmdm/actions?query=workflow%3A%22Angular+CI%22)
+[![Edge Store](https://img.shields.io/badge/Edge%20Store-v2-blue)](https://microsoftedge.microsoft.com/addons/detail/gjjchbkfeokfaifbcokbndccpogfjfpn)
+[![Buy me a coffee](https://img.shields.io/badge/buy%20me%20a%20coffee-%E2%98%95-orange)](https://www.buymeacoffee.com/ginomessmer)
 
-Or how suppose this: Do you also think the downloads overview page is a bit overkill when you want to retrieve your most recent download?
 
-Well, worry no more. This plugin is designed to provide a menu in your Chromium based browser that shows all recent downloads in a non-obstrusive way. Not more or less, it's simple as that.
+# The Missing Download Menu
 
-Built with [React](https://create-react-app.dev/) and [FAST-DNA](https://fast.design/).
+This browser extension provides a menu in your Chromium based browser that shows all recent downloads in a non-obstrusive way. Not more or less, it's simple as that.
+
+Built with [Angular](https://angular.io), uses [Fluent Icons](https://developer.microsoft.com/en-us/fluentui#/styles/web/icons).
+
+👉 Get it from the [Edge Extensions Store](https://microsoftedge.microsoft.com/addons/detail/gjjchbkfeokfaifbcokbndccpogfjfpn).
+
+![Hero Cover](docs/img/hero.png)
 
 ## Features
-- Access your downloads from your menu bar
-- Automatic dark and light mode
-- Integrates well to Edge's design system
-- Search
-- Also works on Chrome
+- [x] Access your downloads from your menu bar
+- [x] Automatic dark and light mode
+- [x] Integrates well to Edge's design system
+- [x] Search
+- [x] Also works on Chrome
+- [ ] Disables download shelf
 
-## Development setup
-I recommend to either **using WSL or a Linux environment for development** since the npm scripts are tailered for these environment. You'll need to have yarn installed.
 
-### Debug extension
-- First time? Do `yarn` to install all dependencies
-- Build the extension with `yarn build`
-- Go to Edge -> Extensions -> Turn on Developer Mode
-- Hit `Load unpacked` and select to the root of the `./build` folder
-- Happy debugging
+---
 
+Do you have any feature requests? Let me know or tweet [@ginomessmer](https://twitter.com/ginomessmer).  
 Like what you're seeing? Feel free to spread the word and if you're feeling extra generous, [buy me a coffee](https://www.buymeacoffee.com/ginomessmer).
+
+---
+
+## Development Setup
+- Install the `@angular/cli` npm package as a global tool: `npm install -g @angular/cli`
+- Restore npm packages: `npm i`
+- Build and watch the project while you are developing: `ng build --watch`
+- Enable developer mode in Microsoft Edge and drop the dist folder to the extensions page
+- Happy building

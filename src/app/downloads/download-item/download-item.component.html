@@ -1,0 +1,36 @@
+<div class="item"
+  [title]="item.url"
+  [class.aborted]="item.error || !item.exists">
+
+  <div class="thumbnail"
+    (click)="openFile()">
+    <img [src]="thumbnailUrl" alt="">
+  </div>
+
+  <div class="meta">
+    <div>
+      <div class="file-meta" (click)="openFile()">
+        <p class="title">
+          {{fileTitle}}
+        </p>
+        <p class="location">
+          {{item.filename}}
+        </p>
+      </div>
+      <span class="link"
+        *ngIf="isCompleted"
+        (click)="openFolder()">
+        Open folder
+      </span>
+    </div>
+
+    <!-- Progress bar -->
+    <ng-container *ngIf="item$ | async as i">
+      <ng-container *ngIf="isInProgress">
+        <progress class="progress-bar"
+          [max]="i.totalBytes"
+          [value]="i.bytesReceived"></progress>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>
