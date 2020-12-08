@@ -1,0 +1,29 @@
+<div class="toolbar">
+  <input type="text"
+    [(ngModel)]="searchTerm"
+    (ngModelChange)="search($event)"
+    placeholder="Search downloads">
+
+    <!-- <a class="btn btn-stealth" routerLink="/settings">
+      <i class="ms-Icon ms-Icon--More" aria-hidden="true"></i>
+    </a> -->
+</div>
+
+<ng-container *ngIf="downloadItems?.length > 0; else noContent">
+  <div class="list">
+    <ng-container *ngFor="let item of downloadItems">
+      <app-download-item [item]="item"></app-download-item>
+    </ng-container>
+  
+    <button (click)="openDownloadsPage()"
+      class="btn btn-stealth btn-block">
+      Show all...
+    </button>  
+  </div>
+</ng-container>
+
+<ng-template #noContent>
+  <div class="empty-list">
+    No downloads found
+  </div>
+</ng-template>
