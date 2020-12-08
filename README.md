@@ -9,7 +9,8 @@ This browser extension provides a menu in your Chromium based browser that shows
 
 Built with [Angular](https://angular.io), uses [Fluent Icons](https://developer.microsoft.com/en-us/fluentui#/styles/web/icons).
 
-👉 Get it from the [Edge Extensions Store](https://microsoftedge.microsoft.com/addons/detail/gjjchbkfeokfaifbcokbndccpogfjfpn).
+👉 Get it from the [Edge Extensions Store](https://microsoftedge.microsoft.com/addons/detail/gjjchbkfeokfaifbcokbndccpogfjfpn).   
+💡 Do you have feature requests? [Open a discussion](https://github.com/ginomessmer/tmdm/discussions/new).
 
 ![Hero Cover](docs/img/hero.png)
 
